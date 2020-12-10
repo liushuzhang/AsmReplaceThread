@@ -2,6 +2,7 @@ package com.example.asmrepalcethread.java;
 
 import android.util.Log;
 
+import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadFactory;
@@ -78,6 +79,27 @@ public class JavaThreadPool {
 
         for (int i = 0; i < 3; i++) {
             threadPoolExecutor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("replceThread", "i------------" + Thread.currentThread().getName());
+                }
+            });
+        }
+    }
+
+
+    public static void executorsNewFixedThreadPool(){
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(4, new ThreadFactory() {
+            private final AtomicInteger mCount = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r, "java executor fixed #" + mCount.getAndIncrement());
+            }
+        });
+
+        for (int i = 0; i < 5; i++) {
+            executor.execute(new Runnable() {
                 @Override
                 public void run() {
                     Log.d("replceThread", "i------------" + Thread.currentThread().getName());

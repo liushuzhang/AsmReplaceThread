@@ -1,4 +1,4 @@
-new thread-----------------------------------16
+new thread-----------------------------------17
 jarName: jetified-okhttp-3.10.0.jar 
 className: okhttp3/internal/http2/Http2Connection 
 method: start 
@@ -36,6 +36,11 @@ newThread
 
 jarName: jetified-disklrucache-4.11.0.jar 
 className: com/bumptech/glide/disklrucache/DiskLruCache$DiskLruCacheThreadFactory 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$7 
 method: newThread 
 newThread 
 
@@ -205,7 +210,7 @@ extendExecutorsThreadList-----------------------------------0
 
 
 
-createExecutorsThreadList-----------------------------------6
+createExecutorsThreadList-----------------------------------7
 jarName: jetified-glide-4.11.0-runtime.jar 
 className: com/bumptech/glide/load/engine/ActiveResources 
 method: <init> 
@@ -229,6 +234,10 @@ newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService;\n
 jarName: core-runtime-2.1.0-runtime.jar 
 className: androidx/arch/core/executor/DefaultTaskExecutor 
 method: <init> 
+newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: executorsNewFixedThreadPool 
 newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
 
 

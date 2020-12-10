@@ -71,74 +71,74 @@ class ThreadDataUtils {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("new thread-----------------------------------" + newThreadList.size()).append("\n")
         for (String thread : newThreadList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("new threadpool-----------------------------------" + createThreadPoolList.size()).append("\n")
         for (String thread : createThreadPoolList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("extend thread-----------------------------------" + extendThreadList.size()).append("\n")
         for (String thread : extendThreadList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("extend threadpool-----------------------------------" + extendThreadPooList.size()).append("\n")
         for (String thread : extendThreadPooList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("newExecutorsThreadList-----------------------------------" + newExecutorsThreadList.size()).append("\n")
         for (String thread : newExecutorsThreadList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("extendExecutorsThreadList-----------------------------------" + extendExecutorsThreadList.size()).append("\n")
         for (String thread : extendExecutorsThreadList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("createExecutorsThreadList-----------------------------------" + createExecutorsThreadList.size()).append("\n")
         for (String thread : createExecutorsThreadList) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("createForkJoinPool-----------------------------------" + createForkJoinPool.size()).append("\n")
         for (String thread : createForkJoinPool) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("extendForkJoinPool-----------------------------------" + extendForkJoinPool.size()).append("\n")
         for (String thread : extendForkJoinPool) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("createScheduledThreadPoolExecutor----------------------------------" + createScheduledThreadPoolExecutor.size()).append("\n")
         for (String thread : createScheduledThreadPoolExecutor) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 
         stringBuffer.append("\n").append("\n").append("\n")
         stringBuffer.append("extendScheduledThreadPoolExecutor-----------------------------------" + extendScheduledThreadPoolExecutor.size()).append("\n")
         for (String thread : extendScheduledThreadPoolExecutor) {
-            println(thread)
+//            println(thread)
             stringBuffer.append(thread).append("\n")
         }
 

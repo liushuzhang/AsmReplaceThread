@@ -1,4 +1,5 @@
 apply plugin: com.thread.plugin.CheckThreadPlugin
+apply plugin: com.thread.plugin.ReplaceThreadPlugin
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -49,8 +50,13 @@ checkThread {
     disableCheckThread = false
 }
 
+replaceThread{
+    disableReplaceThread = false
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':replacecode')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.core:core-ktx:1.3.2'

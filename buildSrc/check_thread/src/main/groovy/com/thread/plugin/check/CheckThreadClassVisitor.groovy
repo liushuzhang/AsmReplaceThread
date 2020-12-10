@@ -31,8 +31,6 @@ class CheckThreadClassVisitor extends ClassVisitor implements Opcodes {
     @Override
     void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
         className = name
-        println("className:$className")
-        println("access:${access.toString()}")
         /**
          * 关于这块的处理逻辑为何是这样的解析：
          * 修饰class的Opcodes标识的符号是经过选择的，转化为对应的二进制都是某一位为1，其余为0
