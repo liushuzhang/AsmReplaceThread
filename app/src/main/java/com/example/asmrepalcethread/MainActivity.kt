@@ -38,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         JavaThreadPool.createCachedThreadPool()
         JavaThreadPool.createFixedThreadPool()
         JavaThreadPool.createSingleThreadPool()
+
+        JavaThreadPool.executorsNewCacheThreadPool()
+        JavaThreadPool.executorsNewFixedThreadPool()
+        JavaThreadPool.executorsNewSingleThreadPool()
     }
 
     /**
@@ -52,5 +56,9 @@ class MainActivity : AppCompatActivity() {
         KoltinThreadPool.createCachedThreadPool()
         KoltinThreadPool.createFixedThreadPool()
         KoltinThreadPool.createSingleThreadPool()
+
+        KoltinThreadPool.executorsNewCacheThreadPool()
+        KoltinThreadPool.executorsNewFixedThreadPool()
+        KoltinThreadPool.executorsNewSingleThreadPool()
     }
 }

@@ -1,7 +1,6 @@
 package com.thread.plugin.replace
 
 import com.thread.plugin.constant.ClassConstant
-import com.thread.plugin.constant.ThreadDataUtils
 import org.objectweb.asm.MethodVisitor
 import org.objectweb.asm.Opcodes
 
@@ -79,7 +78,7 @@ class ReplaceThreadMethodVisitor extends MethodVisitor {
     void visitInsn(int opcode) {
         if (opcode == Opcodes.DUP && isStopDub) {
             //取消复制操作
-           // super.visitInsn(opcode);
+            // super.visitInsn(opcode);
             isStopDub = false;
             println("dup----jarName---" + jarName + "---className----" + className + "---methodName---" + methodName);
             return
@@ -129,21 +128,24 @@ class ReplaceThreadMethodVisitor extends MethodVisitor {
             descriptor = descriptor.substring(0, descriptor.length() - 1) + "Ljava/util/concurrent/ThreadPoolExecutor;"
             mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/example/replacecode/ReThreadPoolExecutor", "getThreadPoolExecutor", descriptor, false);
             return
+        } else if ((owner.equals("java/util/concurrent/Executors") && (name.equals("newFixedThreadPool")) && descriptor.equalsIgnoreCase("(I)Ljava/util/concurrent/ExecutorService;"))
+
+                || (owner.equals("java/util/concurrent/Executors") && (name.equals("newSingleThreadExecutor") && descriptor.equalsIgnoreCase("()Ljava/util/concurrent/ExecutorService;")))
+
+                || (owner.equals("java/util/concurrent/Executors") && (name.equals("newSingleThreadExecutor") && descriptor.equalsIgnoreCase("(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;")))
+
+                || (owner.equals("java/util/concurrent/Executors") && (name.equals("newFixedThreadPool") && descriptor.equalsIgnoreCase("(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;")))
+
+                || (owner.equals("java/util/concurrent/Executors") && (name.equals("newCachedThreadPool") && descriptor.equalsIgnoreCase("()Ljava/util/concurrent/ExecutorService;")))
+
+                || (owner.equals("java/util/concurrent/Executors") && (name.equals("newCachedThreadPool") && descriptor.equalsIgnoreCase("(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;")))) {
+
+            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/example/replacecode/ReExecutorService", name, descriptor, false);
+            return
+
         } else if ((name.equals("newWorkStealingPool") && descriptor.equalsIgnoreCase("(I)Ljava/util/concurrent/ExecutorService;"))
 
-                || (name.equals("newFixedThreadPool") && descriptor.equalsIgnoreCase("(I)Ljava/util/concurrent/ExecutorService;"))
-
                 || (name.equals("newWorkStealingPool") && descriptor.equalsIgnoreCase("()Ljava/util/concurrent/ExecutorService;"))
-
-                || (name.equals("newSingleThreadExecutor") && descriptor.equalsIgnoreCase("()Ljava/util/concurrent/ExecutorService;"))
-
-                || (name.equals("newSingleThreadExecutor") && descriptor.equalsIgnoreCase("(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;"))
-
-                || (name.equals("newFixedThreadPool") && descriptor.equalsIgnoreCase("(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;"))
-
-                || (name.equals("newCachedThreadPool") && descriptor.equalsIgnoreCase("()Ljava/util/concurrent/ExecutorService;"))
-
-                || (name.equals("newCachedThreadPool") && descriptor.equalsIgnoreCase("(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;"))
 
                 || (name.equals("newSingleThreadScheduledExecutor") && descriptor.equalsIgnoreCase("()Ljava/util/concurrent/ScheduledExecutorService;"))
 

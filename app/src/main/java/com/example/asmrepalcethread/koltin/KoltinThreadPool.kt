@@ -94,4 +94,72 @@ object KoltinThreadPool {
             })
         }
     }
+
+
+    fun executorsNewFixedThreadPool() {
+        val executor =
+            Executors.newFixedThreadPool(
+                4,
+                object : ThreadFactory {
+                    private val mCount =
+                        AtomicInteger(1)
+
+                    override fun newThread(r: Runnable): Thread {
+                        return Thread(
+                            r,
+                            "koltin executor fixed #" + mCount.getAndIncrement()
+                        )
+                    }
+                })
+        for (i in 0..4) {
+            executor.execute {
+                Log.d(
+                    "replceThread",
+                    "i------------" + Thread.currentThread().name
+                )
+            }
+        }
+    }
+
+    fun executorsNewCacheThreadPool() {
+        val executor =
+            Executors.newCachedThreadPool(object :
+                ThreadFactory {
+                private val mCount =
+                    AtomicInteger(1)
+
+                override fun newThread(r: Runnable): Thread {
+                    return Thread(r, "koltin executor cache #" + mCount.getAndIncrement())
+                }
+            })
+        for (i in 0..7) {
+            executor.execute {
+                Log.d(
+                    "replceThread",
+                    "i------------" + Thread.currentThread().name
+                )
+            }
+        }
+    }
+
+    fun executorsNewSingleThreadPool() {
+        val executor =
+            Executors.newSingleThreadExecutor(object :
+                ThreadFactory {
+                private val mCount =
+                    AtomicInteger(1)
+
+                override fun newThread(r: Runnable): Thread {
+                    return Thread(r, "koltin executor single #" + mCount.getAndIncrement())
+                }
+            })
+        for (i in 0..2) {
+            executor.execute {
+                Log.d(
+                    "replceThread",
+                    "i------------" + Thread.currentThread().name
+                )
+            }
+        }
+    }
 }

@@ -2,6 +2,7 @@ package com.example.asmrepalcethread.java;
 
 import android.util.Log;
 
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
@@ -89,7 +90,7 @@ public class JavaThreadPool {
 
 
     public static void executorsNewFixedThreadPool(){
-        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(4, new ThreadFactory() {
+        ExecutorService executor = Executors.newFixedThreadPool(4, new ThreadFactory() {
             private final AtomicInteger mCount = new AtomicInteger(1);
 
             @Override
@@ -99,6 +100,46 @@ public class JavaThreadPool {
         });
 
         for (int i = 0; i < 5; i++) {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("replceThread", "i------------" + Thread.currentThread().getName());
+                }
+            });
+        }
+    }
+
+    public static void executorsNewCacheThreadPool(){
+        ExecutorService executor = Executors.newCachedThreadPool( new ThreadFactory() {
+            private final AtomicInteger mCount = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r, "java executor cache #" + mCount.getAndIncrement());
+            }
+        });
+
+        for (int i = 0; i < 8; i++) {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("replceThread", "i------------" + Thread.currentThread().getName());
+                }
+            });
+        }
+    }
+
+    public static void executorsNewSingleThreadPool(){
+        ExecutorService executor = Executors.newSingleThreadExecutor(new ThreadFactory() {
+            private final AtomicInteger mCount = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r, "java executor single #" + mCount.getAndIncrement());
+            }
+        });
+
+        for (int i = 0; i < 2; i++) {
             executor.execute(new Runnable() {
                 @Override
                 public void run() {
