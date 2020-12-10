@@ -1,9 +1,12 @@
-package com.check.thread.plugin
+package com.thread.plugin.check
 
 import org.apache.http.util.TextUtils
 import org.objectweb.asm.ClassVisitor
 import org.objectweb.asm.MethodVisitor
 import org.objectweb.asm.Opcodes
+import com.thread.plugin.constant.ClassConstant
+import com.thread.plugin.constant.ThreadDataUtils
+
 
 class CheckThreadClassVisitor extends ClassVisitor implements Opcodes {
     //类名

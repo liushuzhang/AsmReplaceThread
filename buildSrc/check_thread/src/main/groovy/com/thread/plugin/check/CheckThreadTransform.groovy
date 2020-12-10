@@ -1,4 +1,4 @@
-package com.check.thread.plugin
+package com.thread.plugin.check
 
 import com.android.build.api.transform.Context
 import com.android.build.api.transform.DirectoryInput
@@ -15,6 +15,9 @@ import groovy.io.FileType
 import org.apache.commons.io.FileUtils
 import org.gradle.api.Project
 import org.apache.commons.codec.digest.DigestUtils
+import com.thread.plugin.constant.ThreadDataUtils
+import com.thread.plugin.constant.FilterClass
+
 
 import java.util.Set;
 

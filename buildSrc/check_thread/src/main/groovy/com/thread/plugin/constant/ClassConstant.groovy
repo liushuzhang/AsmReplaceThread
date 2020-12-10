@@ -1,4 +1,4 @@
-package com.check.thread.plugin;
+package com.thread.plugin.constant;
 
 class ClassConstant {
     public static final String M_Thread = "java/lang/Thread";

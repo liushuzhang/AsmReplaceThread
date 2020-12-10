@@ -1,4 +1,4 @@
-package com.check.thread.plugin;
+package com.thread.plugin.check;
 
 /**
  * @Author: liushuzhang

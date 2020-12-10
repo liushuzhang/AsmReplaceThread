@@ -1,4 +1,4 @@
-package com.check.thread.plugin
+package com.thread.plugin.constant
 
 class FilterClass{
     private  static HashSet<String> exclude;

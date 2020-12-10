@@ -1,4 +1,4 @@
-new thread-----------------------------------11
+new thread-----------------------------------16
 jarName: jetified-okhttp-3.10.0.jar 
 className: okhttp3/internal/http2/Http2Connection 
 method: start 
@@ -40,24 +40,49 @@ method: newThread
 newThread 
 
 jarName: localFile 
-className: com/example/asmrepalcethread/MainActivity$threadPoolExecutor$1 
+className: com/example/asmrepalcethread/java/JavaThreadPool$5 
 method: newThread 
 newThread 
 
 jarName: localFile 
-className: com/example/asmrepalcethread/MainActivity 
-method: onCreate 
+className: com/example/asmrepalcethread/java/JavaNewThread 
+method: createNewThread 
 newThread 
 
 jarName: localFile 
-className: com/example/asmrepalcethread/MainActivity$executor$1 
+className: com/example/asmrepalcethread/java/JavaThreadPool$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$3 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinNewThread 
+method: createNewThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$createSingleThreadPool$threadPoolExecutor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$createFixedThreadPool$threadPoolExecutor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$createCachedThreadPool$threadPoolExecutor$1 
 method: newThread 
 newThread 
 
 
 
 
-new threadpool-----------------------------------10
+new threadpool-----------------------------------15
 jarName: jetified-okhttp-3.10.0.jar 
 className: okhttp3/internal/cache/DiskLruCache 
 method: create 
@@ -104,14 +129,39 @@ method: <init>
 ThreadPoolExecutor
 
 jarName: localFile 
-className: com/example/asmrepalcethread/MainActivity 
-method: <init> 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: createFixedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: createCachedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: createSingleThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: createFixedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: createCachedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: createSingleThreadPool 
 ThreadPoolExecutor
 
 
 
 
-extend thread-----------------------------------5
+extend thread-----------------------------------7
 jarName: jetified-glide-4.11.0-runtime.jar 
 ClassName: com/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1  
 extends java/lang/Thread  
@@ -132,6 +182,14 @@ jarName: jetified-okio-1.14.0.jar
 ClassName: okio/AsyncTimeout$Watchdog  
 extends java/lang/Thread  
 
+jarName: localFile 
+ClassName: com/example/asmrepalcethread/java/JavaNewThread$MyExtendsThread  
+extends java/lang/Thread  
+
+jarName: localFile 
+ClassName: com/example/asmrepalcethread/koltin/KoltinNewThread$MyExtendsThread  
+extends java/lang/Thread  
+
 
 
 
@@ -147,7 +205,7 @@ extendExecutorsThreadList-----------------------------------0
 
 
 
-createExecutorsThreadList-----------------------------------7
+createExecutorsThreadList-----------------------------------6
 jarName: jetified-glide-4.11.0-runtime.jar 
 className: com/bumptech/glide/load/engine/ActiveResources 
 method: <init> 
@@ -170,10 +228,6 @@ method: getTextFuture
 newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService;\n
 jarName: core-runtime-2.1.0-runtime.jar 
 className: androidx/arch/core/executor/DefaultTaskExecutor 
-method: <init> 
-newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
-jarName: localFile 
-className: com/example/asmrepalcethread/MainActivity 
 method: <init> 
 newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
 

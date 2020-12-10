@@ -1,7 +1,8 @@
-package com.check.thread.plugin;
+package com.thread.plugin;
 
-import com.android.build.gradle.AppExtension;
-
+import com.android.build.gradle.AppExtension
+import com.thread.plugin.check.CheckThreadExtension
+import com.thread.plugin.check.CheckThreadTransform;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 

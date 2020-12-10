@@ -1,5 +1,6 @@
-package com.check.thread.plugin
+package com.thread.plugin.check
 
+import com.thread.plugin.constant.FilterClass
 import org.apache.commons.codec.digest.DigestUtils
 import org.apache.commons.io.IOUtils
 

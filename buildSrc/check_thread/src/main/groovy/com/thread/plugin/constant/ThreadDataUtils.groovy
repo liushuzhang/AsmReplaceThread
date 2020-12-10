@@ -1,4 +1,6 @@
-package com.check.thread.plugin
+package com.thread.plugin.constant
+
+import com.thread.plugin.check.CheckThreadTransform
 
 
 //用于统计项目中使用线程的情况
