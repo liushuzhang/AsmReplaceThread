@@ -1,5 +1,10 @@
 package com.example.asmrepalcethread.java;
 
+import android.app.ActivityManager;
+
+import static android.content.Context.ACTIVITY_SERVICE;
+import static androidx.core.content.ContextCompat.getSystemService;
+
 /**
  * @Author: liushuzhang
  * @Date: 2020-12-03 16:36
@@ -39,4 +44,7 @@ public class JavaNewThread {
             }
         }
     }
+
+
+
 }
