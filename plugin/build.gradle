@@ -21,9 +21,9 @@ dependencies {
 
 }
 
-//rootProject.dependencies {
-//    runtime project(path)
-//}
+rootProject.dependencies {
+    runtime project(path)
+}
 //}
 
 allprojects {
