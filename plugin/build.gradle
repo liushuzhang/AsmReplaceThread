@@ -1,9 +1,6 @@
-//subprojects {
 apply plugin: "groovy"
 apply plugin: 'maven'
 
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"
 
 dependencies {
     implementation localGroovy()
@@ -21,10 +18,6 @@ dependencies {
 
 }
 
-rootProject.dependencies {
-    runtime project(path)
-}
-//}
 
 allprojects {
     repositories {
