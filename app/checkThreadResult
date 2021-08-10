@@ -1,0 +1,341 @@
+new thread-----------------------------------26
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/http2/Http2Connection 
+method: start 
+newThread 
+
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/Util$2 
+method: newThread 
+newThread 
+
+jarName: jetified-glide-4.11.0-runtime.jar 
+className: com/bumptech/glide/load/engine/ActiveResources$1 
+method: newThread 
+newThread 
+
+jarName: jetified-kotlinx-coroutines-core-1.3.0.jar 
+className: kotlinx/coroutines/DefaultExecutor 
+method: createThreadSync 
+newThread 
+
+jarName: jetified-kotlinx-coroutines-core-1.3.0.jar 
+className: kotlinx/coroutines/CommonPool$createPlainPool$1 
+method: newThread 
+newThread 
+
+jarName: loader-1.0.0-runtime.jar 
+className: androidx/loader/content/ModernAsyncTask$1 
+method: newThread 
+newThread 
+
+jarName: core-runtime-2.1.0-runtime.jar 
+className: androidx/arch/core/executor/DefaultTaskExecutor$1 
+method: newThread 
+newThread 
+
+jarName: jetified-disklrucache-4.11.0.jar 
+className: com/bumptech/glide/disklrucache/DiskLruCache$DiskLruCacheThreadFactory 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$8 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$12 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$10 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaNewThread 
+method: createNewThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$4 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$6 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool$2 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/lambda/ThreadUtils 
+method: startThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/run/ThreadUtils 
+method: startThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/run/ThreadUtils 
+method: startThreadWithLambda 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$executorsNewCacheThreadPool$executor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinNewThread 
+method: createNewThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$executorsNewSingleThreadPool$executor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$executorsNewFixedThreadPool$executor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$createSingleThreadPool$threadPoolExecutor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$createFixedThreadPool$threadPoolExecutor$1 
+method: newThread 
+newThread 
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool$createCachedThreadPool$threadPoolExecutor$1 
+method: newThread 
+newThread 
+
+
+
+
+new threadpool-----------------------------------16
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/cache/DiskLruCache 
+method: create 
+ThreadPoolExecutor
+
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/http2/Http2Connection 
+method: <init> 
+ThreadPoolExecutor
+
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/http2/Http2Connection 
+method: <clinit> 
+ThreadPoolExecutor
+
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/Dispatcher 
+method: executorService 
+ThreadPoolExecutor
+
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/ConnectionPool 
+method: <clinit> 
+ThreadPoolExecutor
+
+jarName: jetified-glide-4.11.0-runtime.jar 
+className: com/bumptech/glide/load/engine/executor/GlideExecutor$Builder 
+method: build 
+ThreadPoolExecutor
+
+jarName: jetified-glide-4.11.0-runtime.jar 
+className: com/bumptech/glide/load/engine/executor/GlideExecutor 
+method: newUnlimitedSourceExecutor 
+ThreadPoolExecutor
+
+jarName: loader-1.0.0-runtime.jar 
+className: androidx/loader/content/ModernAsyncTask 
+method: <clinit> 
+ThreadPoolExecutor
+
+jarName: jetified-disklrucache-4.11.0.jar 
+className: com/bumptech/glide/disklrucache/DiskLruCache 
+method: <init> 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: createFixedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: createCachedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: createSingleThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: <clinit> 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: createFixedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: createCachedThreadPool 
+ThreadPoolExecutor
+
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: createSingleThreadPool 
+ThreadPoolExecutor
+
+
+
+
+extend thread-----------------------------------8
+jarName: jetified-glide-4.11.0-runtime.jar 
+ClassName: com/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1  
+extends java/lang/Thread  
+
+jarName: jetified-kotlinx-coroutines-core-1.3.0.jar 
+ClassName: kotlinx/coroutines/scheduling/CoroutineScheduler$Worker  
+extends java/lang/Thread  
+
+jarName: jetified-kotlinx-coroutines-core-1.3.0.jar 
+ClassName: kotlinx/coroutines/PoolThread  
+extends java/lang/Thread  
+
+jarName: jetified-kotlin-stdlib-1.3.71.jar 
+ClassName: kotlin/concurrent/ThreadsKt$thread$thread$1  
+extends java/lang/Thread  
+
+jarName: jetified-okio-1.14.0.jar 
+ClassName: okio/AsyncTimeout$Watchdog  
+extends java/lang/Thread  
+
+jarName: localFile 
+ClassName: com/example/asmrepalcethread/java/JavaNewThread$MyExtendsThread  
+extends java/lang/Thread  
+
+jarName: localFile 
+ClassName: com/example/asmrepalcethread/run/ShareThread  
+extends java/lang/Thread  
+
+jarName: localFile 
+ClassName: com/example/asmrepalcethread/koltin/KoltinNewThread$MyExtendsThread  
+extends java/lang/Thread  
+
+
+
+
+extend threadpool-----------------------------------0
+
+
+
+newExecutorsThreadList-----------------------------------0
+
+
+
+extendExecutorsThreadList-----------------------------------0
+
+
+
+createExecutorsThreadList-----------------------------------12
+jarName: jetified-glide-4.11.0-runtime.jar 
+className: com/bumptech/glide/load/engine/ActiveResources 
+method: <init> 
+newSingleThreadExecutor:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: jetified-kotlinx-coroutines-core-1.3.0.jar 
+className: kotlinx/coroutines/CommonPool 
+method: createPlainPool 
+newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: jetified-kotlinx-coroutines-core-1.3.0.jar 
+className: kotlinx/coroutines/ThreadPoolDispatcher 
+method: <init> 
+newScheduledThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledExecutorService;\n
+jarName: recyclerview-1.1.0-runtime.jar 
+className: androidx/recyclerview/widget/AsyncDifferConfig$Builder 
+method: build 
+newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService;\n
+jarName: core-1.3.2-runtime.jar 
+className: androidx/core/text/PrecomputedTextCompat 
+method: getTextFuture 
+newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService;\n
+jarName: core-runtime-2.1.0-runtime.jar 
+className: androidx/arch/core/executor/DefaultTaskExecutor 
+method: <init> 
+newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: executorsNewFixedThreadPool 
+newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: executorsNewCacheThreadPool 
+newCachedThreadPool:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/java/JavaThreadPool 
+method: executorsNewSingleThreadPool 
+newSingleThreadExecutor:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: executorsNewFixedThreadPool 
+newFixedThreadPool:(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: executorsNewCacheThreadPool 
+newCachedThreadPool:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+jarName: localFile 
+className: com/example/asmrepalcethread/koltin/KoltinThreadPool 
+method: executorsNewSingleThreadPool 
+newSingleThreadExecutor:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;\n
+
+
+
+createForkJoinPool-----------------------------------0
+
+
+
+extendForkJoinPool-----------------------------------0
+
+
+
+createScheduledThreadPoolExecutor----------------------------------2
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/http2/Http2Connection 
+method: <init> 
+new ScheduledThreadPoolExecutor
+
+jarName: jetified-okhttp-3.10.0.jar 
+className: okhttp3/internal/ws/RealWebSocket 
+method: initReaderAndWriter 
+new ScheduledThreadPoolExecutor
+
+
+
+
+extendScheduledThreadPoolExecutor-----------------------------------0

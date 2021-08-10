@@ -25,6 +25,16 @@ public class JavaThreadPool {
     //最大线程数
     public static final int MAXIMUM_POOL_SIZE = CPU_COUNT * 2 + 1;
 
+    public static ThreadPoolExecutor usePoolExecutor = new ThreadPoolExecutor(
+            CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, 0L, TimeUnit.MILLISECONDS,
+            new LinkedBlockingQueue<Runnable>(), new ThreadFactory() {
+        private final AtomicInteger mCount = new AtomicInteger(1);
+
+        public Thread newThread(Runnable r) {
+            return new Thread(r, "java fixed #" + mCount.getAndIncrement());
+        }
+    });
+
     public static void createFixedThreadPool() {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
                 CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, 0L, TimeUnit.MILLISECONDS,

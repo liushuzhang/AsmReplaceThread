@@ -4,20 +4,23 @@ import android.app.ActivityManager
 import android.app.ActivityManager.RunningAppProcessInfo
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
 import com.example.asmrepalcethread.java.JavaNewThread
 import com.example.asmrepalcethread.java.JavaThreadPool
 import com.example.asmrepalcethread.koltin.KoltinNewThread
 import com.example.asmrepalcethread.koltin.KoltinThreadPool
+import com.example.asmrepalcethread.run.ShareThread
+import com.example.asmrepalcethread.run.ThreadUtils
+import com.example.replacecode.run.RunableUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
+    private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 //        Glide.with(this)
 //                .load(url)
 //                .into(iv_pic)
-          val message:String?=null;
+//          val message:String?=null;
 
 //
 //        initJavaThread()
@@ -36,6 +39,61 @@ class MainActivity : AppCompatActivity() {
 //        netRequest()
 //
 //        getProcess()
+//        addRunable()
+
+        addRunableTest()
+
+        tv_get.setOnClickListener {
+            getRunable()
+        }
+    }
+
+    fun addRunableTest(){
+//        handler.postDelayed( {
+            ShareThread().start()
+//        },1000)
+
+//        handler.postDelayed( {
+            ThreadUtils.startThreadWithLambda()
+//        },2000)
+
+//        handler.postDelayed( {
+            ThreadUtils.startThread()
+//        },3000)
+
+//        handler.postDelayed( {
+            ThreadUtils.runWithThreadPool()
+//        },4000)
+
+//        handler.postDelayed( {
+            ThreadUtils.runWithThreadPoolLambda()
+//        },5000)
+
+    }
+
+
+
+
+     fun addRunable(){
+        handler.postDelayed( {
+            RunableUtils.addRunable("aaaa")
+        },1000)
+        handler.postDelayed( {
+            RunableUtils.addRunable("bbbb")
+        },2000)
+        handler.postDelayed( {
+            RunableUtils.addRunable("cccc")
+        },3000)
+        handler.postDelayed( {
+            RunableUtils.addRunable("dddd")
+        },4000)
+
+    }
+
+    fun getRunable(){
+        RunableUtils.getSortedList().forEach {
+           Log.d("testr","runName---${it.key}-----durtime---${it.startTime}")
+        }
     }
 
     private fun getNull(mess:String?){
